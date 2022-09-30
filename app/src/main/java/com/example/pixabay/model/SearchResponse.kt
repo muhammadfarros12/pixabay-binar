@@ -8,7 +8,7 @@ data class SearchResponse(
     @SerializedName("totalHits")
     val totalHits: Int?,
     @SerializedName("hits")
-    val post: List<Post>?
+    val posts: List<Post>?
 
 
 )
