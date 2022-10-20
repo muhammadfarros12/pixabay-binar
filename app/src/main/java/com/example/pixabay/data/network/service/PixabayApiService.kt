@@ -1,5 +1,6 @@
-package com.example.pixabay.service
+package com.example.pixabay.data.network.service
 
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.example.pixabay.BuildConfig
 import com.example.pixabay.model.SearchResponse
 import okhttp3.Interceptor
@@ -21,7 +22,7 @@ interface PixabayApiService {
         private const val TYPE_PHOTO = "photo"
 
         @JvmStatic
-        operator fun invoke(): PixabayApiService {
+        operator fun invoke(chuckerInterceptor: ChuckerInterceptor): PixabayApiService {
             val authInterceptor = Interceptor {
                 val originRequest = it.request()
                 val oldUrl = originRequest.url

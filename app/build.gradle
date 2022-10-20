@@ -75,5 +75,9 @@ dependencies {
 
     implementation 'androidx.activity:activity-ktx:1.5.1'
 
+    // chucker
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
 
 }

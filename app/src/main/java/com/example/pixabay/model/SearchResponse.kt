@@ -9,6 +9,4 @@ data class SearchResponse(
     val totalHits: Int?,
     @SerializedName("hits")
     val posts: List<Post>?
-
-
 )
